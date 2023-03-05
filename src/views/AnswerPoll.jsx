@@ -35,7 +35,7 @@ const AnswerPoll = () => {
     socket.on("question", (payload) => {
       // console.log(payload, question);
       setQuestion(payload);
-      setTimer(60);
+      setTimer(payload.timer || 60);
       dispatch(setResults(false));
     });
   }, []);

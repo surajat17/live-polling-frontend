@@ -39,7 +39,7 @@ const CreatePoll = () => {
 
   return (
     <div>
-      <NavBar title="ask questions" />
+      <NavBar title="Ask questions" />
       <div className="poll">
         <History />
         <TextField
@@ -64,9 +64,9 @@ const CreatePoll = () => {
             <table>
               <thead>
                 <tr>
-                  <th>Options</th>
+                  <th>Option</th>
                   <th>
-                    <span style={{ marginLeft: "30px" }}>mark correct one</span>
+                    <span style={{ marginLeft: "30px" }}>mark the correct one</span>
                   </th>
                 </tr>
               </thead>
@@ -88,7 +88,7 @@ const CreatePoll = () => {
           )}
           <div style={{ display: "flex", alignItems: "center" }}>
             <TextField
-              placeholder="Option"
+              placeholder="Options"
               value={newOpt}
               onChange={(e) => setNewOpt(e.target.value)}
             />
@@ -103,7 +103,15 @@ const CreatePoll = () => {
           </div>
         </RadioGroup>
         <div className="flex-between">
-
+          <div>
+            <TextField
+              placeholder="Maximum Time (seconds)"
+              label="Maximum Time (seconds)"
+              value={timer}
+              type="number"
+              onChange={(e) => setTimer(e.target.value)}
+            />
+          </div>
           <Button
             disabled={!value.trim() || correct === -1}
             variant="contained"
