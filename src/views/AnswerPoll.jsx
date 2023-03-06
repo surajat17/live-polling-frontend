@@ -1,4 +1,4 @@
-import { Button, FormControlLabel, Radio, RadioGroup } from "@mui/material";
+import { Button, FormControlLabel, Radio, RadioGroup, Container } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import CircularProgressWithLabel from "../components/CPLabel";
@@ -68,7 +68,8 @@ const AnswerPoll = () => {
   return results ? (
     <Results />
   ) : (
-    <div>
+<Container>
+      <div>
       <NavBar title={"Select correct option and submit"}>
         <CircularProgressWithLabel
           value={(timer / question.timer) * 100 || 100}
@@ -103,6 +104,7 @@ const AnswerPoll = () => {
         </div>
       </div>
     </div>
+</Container>
   );
 };
 

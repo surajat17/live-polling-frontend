@@ -1,4 +1,4 @@
-import { Button, Card, CircularProgress } from "@mui/material";
+import { Button, Card, CircularProgress, Container } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
@@ -42,7 +42,8 @@ const Results = () => {
   return (
     <div>
       <NavBar title="Polling results" />
-      <div className="selection">
+    <Container>
+            <div className="selection">
         <h2>{`Q. ${question.question}`}</h2>
         {Object.keys(question.votes).map((opt, index) => (
           <Card
@@ -77,6 +78,7 @@ const Results = () => {
           )}
         </div>
       </div>
+    </Container>
     </div>
   );
 };

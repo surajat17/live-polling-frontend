@@ -17,8 +17,9 @@ const Name = () => {
         variant="outlined"
         value={name}
         onChange={(e) => setName(e.target.value)}
+        sx={{ maxWidth: '200px', margin: 'auto', marginTop: 10 }}
       />
-      <div>
+      <div style={{ display: "flex", justifyContent: "center", marginTop: 80, marginBottom : 50}}>
         <Button
           variant="contained"
           onClick={() => {
@@ -31,6 +32,7 @@ const Name = () => {
     </div>
   );
 };
+
 
 const Student = () => {
   const { name } = useSelector((state) => state.student);

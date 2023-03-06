@@ -4,6 +4,7 @@ import {
   Radio,
   RadioGroup,
   TextField,
+  Container,
 } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
@@ -40,7 +41,8 @@ const CreatePoll = () => {
   return (
     <div>
       <NavBar title="Ask questions" />
-      <div className="poll">
+<Container>
+        <div className="poll">
         <History />
         <TextField
           id="outlined-multiline-flexible"
@@ -123,6 +125,7 @@ const CreatePoll = () => {
           </Button>
         </div>
       </div>
+</Container>
     </div>
   );
 };
